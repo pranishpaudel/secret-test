@@ -41,6 +41,11 @@ console.log('Secrets loaded into environment variables successfully.',secrets,"\
     // Access individual keys
     console.log('Secrets loaded successfully:', Object.keys(secrets));
 
+    console.log("REDIS_CONNECTION_HOST:", process.env.REDIS_CONNECTION_HOST);
+    console.log("REDIS_CONNECTION_PORT:", process.env.REDIS_CONNECTION_PORT);
+    console.log("S3_ACCESS_KEY_ID:", process.env.S3_ACCESS_KEY_ID);
+    console.log("S3_SECRET_KEY:", process.env.S3_SECRET_KEY);
+
     return secrets;
   } catch (error) {
     console.error('Error retrieving secrets:', error);
